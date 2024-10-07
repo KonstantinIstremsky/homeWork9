@@ -1,15 +1,50 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        task1();
+        task2();
+        task3();
+        task4();
+        }
+        public static void task1(){
+        int [] expenses = {100, 200, 300, 400, 500};
+        int total = 0;
+         for (int value: expenses) {
+             total += value;
+         }
+         System.out.println("Сумма трат за месяц составила " + total + " тысяч рублей");
+        }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        public static void task2(){
+        int [] expenses = {100, 200, 300, 400, 500};
+        int min = expenses[0];
+        int max = expenses[0];
+        for (int value: expenses) {
+            if (value < min){
+                min = value;
+            }
+            if (value > max){
+                max = value;
+            }
+        }
+            System.out.println("Минимальная сумма трат за день состваила " + min + " рублей");
+            System.out.println("Максимальная сумма трат за день состваила " + max + " рублей");
+    }
+
+    public static void task3(){
+        int [] expenses = {100, 200, 300, 400, 500};
+        int total = 0;
+        for (int value: expenses) {
+            total += value;
+    }
+        double average = total / expenses.length;
+        System.out.println("Средняя сумма трат за день составила " + average + " рублей");
+    }
+
+    public static void task4(){
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i>=0; i--){
+        System.out.print(reverseFullName[i]);
         }
     }
-}
+    }
